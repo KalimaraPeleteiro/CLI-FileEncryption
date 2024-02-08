@@ -4,15 +4,12 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/KalimaraPeleteiro/CLI-FileEncryption/encryption"
+	"github.com/KalimaraPeleteiro/CLI-FileEncryption/criptography"
 	"golang.org/x/term"
 )
 
 func main() {
 
-	// O primeiro passo é extrair os parâmetros que serão passados ao programa.
-
-	// Não serão aceitos menos do que dois parâmetros.
 	if len(os.Args) < 2 {
 		helpMessage()
 		os.Exit(0)
@@ -59,7 +56,7 @@ func encryptHandler() {
 
 	password := getPassword()
 	fmt.Println("\nCriptografando seu arquivo...")
-	encryption.Encrypt(file, password)
+	criptography.Encrypt(file, password)
 	fmt.Println("\nArquivo seguro!")
 }
 
@@ -77,7 +74,7 @@ func decryptHandler() {
 	fmt.Print("Passe a senha do arquivo: ")
 	password, _ := term.ReadPassword(0)
 	fmt.Println("\nTentando descriptografar o arquivo...")
-	encryption.Decrypt(file, password)
+	criptography.Decrypt(file, password)
 	fmt.Println("\nArquivo Descriptografado!")
 }
 
