@@ -34,12 +34,12 @@ func helpMessage() {
 	fmt.Println("Use para criptografar arquivos cujo conteúdo deseja manter secreto, e acessar somente uma senha prévia.")
 	fmt.Println("")
 	fmt.Println("Como Usar?")
-	fmt.Println("\tgo run . encrypt caminho/para/o/arquivo")
+	fmt.Println("go run . encrypt caminho/para/o/arquivo")
 	fmt.Println("")
 	fmt.Println("Comandos Disponíveis")
-	fmt.Println("\t encrypt \t Para criptografar arquivos (é necessário passar uma senha).")
-	fmt.Println("\t decrypt \t Para descriptografar arquivos com base na senha entregue.")
-	fmt.Println("\t help \t Para obter informações sobre o programa (é esse texto).")
+	fmt.Println("encrypt \t Para criptografar arquivos (é necessário passar uma senha).")
+	fmt.Println("decrypt \t Para descriptografar arquivos com base na senha entregue.")
+	fmt.Println("help    \t Para obter informações sobre o programa (é esse texto).")
 	fmt.Println("")
 }
 
